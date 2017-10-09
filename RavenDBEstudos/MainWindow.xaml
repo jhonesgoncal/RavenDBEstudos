@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RavenDBEstudos"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="421.974" Width="750">
     <Grid>
-        
+        <Button x:Name="btnNovo" Content="Novo" HorizontalAlignment="Left" Height="64" Margin="10,10,0,0" VerticalAlignment="Top" Width="146" Click="btnNovo_Click"/>
+        <ListView Margin="10,93,10,10" Name="lstClientes" ItemsSource="{Binding}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="200" Header="Nome" DisplayMemberBinding="{Binding Nome}"/>
+                    <GridViewColumn Width="200" Header="Email" DisplayMemberBinding="{Binding Email}"/>
+                    <GridViewColumn Width="150" Header="CPF" DisplayMemberBinding="{Binding CPF}"/>
+                    <GridViewColumn Width="150" Header="Telefone" DisplayMemberBinding="{Binding Telefone}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="btnEditar" Content="Editar" HorizontalAlignment="Left" Height="64" Margin="161,10,0,0" VerticalAlignment="Top" Width="146" Click="btnEditar_Click"/>
+        <Button x:Name="btnExcluir" Content="Excluir" HorizontalAlignment="Left" Height="64" Margin="312,10,0,0" VerticalAlignment="Top" Width="146" Click="btnExcluir_Click"/>
+        <Button x:Name="btnAtualizar" Content="Atualizar" HorizontalAlignment="Left" Height="64" Margin="463,10,0,0" VerticalAlignment="Top" Width="146" Click="btnAtualizar_Click"/>
+
+
+
     </Grid>
 </Window>
